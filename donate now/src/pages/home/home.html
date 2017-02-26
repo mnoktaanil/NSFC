@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+  <ion-list>
+  <ion-item>
+    <ion-label>Blood Type</ion-label>
+    <ion-select [(ngModel)]="gaming" multiple="true" cancelText="Cancel" okText="Ok!">
+      <ion-option value="a">A</ion-option>
+      <ion-option value="b">B</ion-option>
+      <ion-option value="zero">0</ion-option>
+      <ion-option value="ab">AB</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>RH</ion-label>
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="neg">negative(-)</ion-option>
+      <ion-option value="pos">positive(+)</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<ion-card-content>
+     Range (in km):
+  </ion-card-content>
+<ion-item>
+  <ion-range [(ngModel)]="Range">
+    <ion-icon range-left small name="0km">0</ion-icon>
+    <ion-icon range-right small name="100km">100</ion-icon>
+  </ion-range>
+</ion-item>
+</ion-card>
+<button ion-button full>Search</button>
+</ion-content>
